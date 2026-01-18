@@ -57,6 +57,33 @@ int main() {
 
   std::cout << std::endl;
 
+  // Cat 복사 생성자 테스트
+  std::cout << "* Cat Copy Constructor Test *" << std::endl;
+  Cat *original_cat = new Cat();
+  original_cat->getBrain()->setIdeaAt(
+      0,
+      "Original Cat Idea"); 
+
+  Cat *copied_cat = new Cat(*original_cat);
+
+  std::cout << "Original Cat's Idea: " << original_cat->getBrain()->getIdeaAt(0)
+            << std::endl;
+  std::cout << "Copied Cat's Idea: " << copied_cat->getBrain()->getIdeaAt(0)
+            << std::endl;
+
+  std::cout << "\n-> Modifying original cat's brain...\n" << std::endl;
+  original_cat->getBrain()->setIdeaAt(0, "New Cat Idea!");
+
+  std::cout << "Original Cat's Idea: " << original_cat->getBrain()->getIdeaAt(0)
+            << std::endl;
+  std::cout << "Copied Cat's Idea: " << copied_cat->getBrain()->getIdeaAt(0)
+            << " (Should be 'Original Cat Idea')" << std::endl;
+	
+  delete original_cat;
+  delete copied_cat;
+
+  std::cout << std::endl;
+
   // 복사 대입 연산자 테스트
   std::cout << "* Copy Assignment Operator Test *" << std::endl;
   Cat *cat1 = new Cat();
