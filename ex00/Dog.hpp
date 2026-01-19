@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:01:51 by yoshin            #+#    #+#             */
-/*   Updated: 2026/01/06 18:45:44 by yoshin           ###   ########.fr       */
+/*   Updated: 2026/01/18 21:18:28 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 class Dog : public Animal {
   public:
   Dog(void);
-  Dog(const Dog &other);
+  Dog(Dog const &other);
   virtual ~Dog(void);
 
-  Dog &operator=(const Dog &other);
+  Dog &operator=(Dog const &other);
 
   void makeSound(void) const;
 
