@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 17:57:42 by yoshin            #+#    #+#             */
-/*   Updated: 2026/01/11 18:10:23 by yoshin           ###   ########.fr       */
+/*   Updated: 2026/01/18 21:21:51 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 class AAnimal {
 public:
   AAnimal(void);
-  AAnimal(const std::string &type);
-  AAnimal(const AAnimal &other);
+  AAnimal(std::string const &type);
+  AAnimal(AAnimal const &other);
   virtual ~AAnimal(void);
 
-  AAnimal &operator=(const AAnimal &other);
+  AAnimal &operator=(AAnimal const &other);
 
   const std::string &getType(void) const;
   virtual void makeSound(void) const = 0;
