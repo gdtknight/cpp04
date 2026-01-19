@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 13:50:30 by yoshin            #+#    #+#             */
-/*   Updated: 2026/01/19 13:50:30 by yoshin           ###   ########.fr       */
+/*   Updated: 2026/01/19 15:25:08 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main() {
       animals[i] = new Dog();
     else
       animals[i] = new Cat();
-    std::cout << "Created " << animals[i]->getType() << std::endl;
+    std::cout << "[" << i << "] Animal created - " << animals[i]->getType() << std::endl;
   }
 
   std::cout << std::endl;
