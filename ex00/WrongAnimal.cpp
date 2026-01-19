@@ -6,11 +6,12 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 13:50:16 by yoshin            #+#    #+#             */
-/*   Updated: 2026/01/13 13:50:16 by yoshin           ###   ########.fr       */
+/*   Updated: 2026/01/18 21:19:27 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
+
 #include <iostream>
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal") {
@@ -21,7 +22,7 @@ WrongAnimal::WrongAnimal(std::string const &type) : type(type) {
   std::cout << "WrongAnimal type constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &src) {
+WrongAnimal::WrongAnimal(WrongAnimal const &src) {
   *this = src;
   std::cout << "WrongAnimal copy constructor called" << std::endl;
 }
@@ -30,11 +31,13 @@ WrongAnimal::~WrongAnimal() {
   std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs) {
+WrongAnimal &WrongAnimal::operator=(WrongAnimal const &rhs) {
+  std::cout << "WrongAnimal assignation operator called" << std::endl;
+
   if (this != &rhs) {
     this->type = rhs.type;
   }
-  std::cout << "WrongAnimal assignation operator called" << std::endl;
+
   return *this;
 }
 
