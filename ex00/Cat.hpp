@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:01:51 by yoshin            #+#    #+#             */
-/*   Updated: 2026/01/06 18:45:50 by yoshin           ###   ########.fr       */
+/*   Updated: 2026/01/18 21:18:37 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@
 #include "Animal.hpp"
 
 class Cat : public Animal {
-  public:
+public:
   Cat(void);
-  Cat(const Cat &other);
+  Cat(Cat const &other);
   virtual ~Cat(void);
 
-  Cat &operator=(const Cat &other);
+  Cat &operator=(Cat const &other);
 
   void makeSound(void) const;
 
-  protected:
-  private:
+protected:
+private:
 };
 
 #endif
