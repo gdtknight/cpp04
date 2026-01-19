@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 19:09:24 by yoshin            #+#    #+#             */
-/*   Updated: 2026/01/06 19:23:41 by yoshin           ###   ########.fr       */
+/*   Updated: 2026/01/18 21:21:07 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 class Brain {
 public:
   Brain(void);
-  Brain(const Brain &other);
+  Brain(Brain const &other);
   virtual ~Brain(void);
 
-  Brain &operator=(const Brain &other);
+  Brain &operator=(Brain const &other);
 
   const std::string &getIdeaAt(int idx) const;
-  void setIdeaAt(int idx, const std::string &idea);
+  void setIdeaAt(int idx, std::string const &idea);
 
 private:
   std::string ideas[100];
