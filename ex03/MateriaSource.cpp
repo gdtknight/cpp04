@@ -6,18 +6,24 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 13:45:07 by yoshin            #+#    #+#             */
-/*   Updated: 2026/01/15 12:16:39 by yoshin           ###   ########.fr       */
+/*   Updated: 2026/01/18 21:26:26 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
+#include <iostream>
+
 MateriaSource::MateriaSource() {
+  std::cout << "MateriaSource default constructor called" << std::endl;
+
   for (int i = 0; i < 4; i++)
     (this->templates)[i] = NULL;
 }
 
-MateriaSource::MateriaSource(const MateriaSource &src) {
+MateriaSource::MateriaSource(MateriaSource const &src) {
+  std::cout << "MateriaSource copy constructor called" << std::endl;
+
   for (int i = 0; i < 4; i++) {
     if (src.templates[i])
       (this->templates)[i] = src.templates[i]->clone();
@@ -27,6 +33,8 @@ MateriaSource::MateriaSource(const MateriaSource &src) {
 }
 
 MateriaSource::~MateriaSource() {
+  std::cout << "MateriaSource destructor called" << std::endl;
+
   for (int i = 0; i < 4; i++) {
     if ((this->templates)[i])
       delete (this->templates)[i];
@@ -34,6 +42,8 @@ MateriaSource::~MateriaSource() {
 }
 
 MateriaSource &MateriaSource::operator=(MateriaSource const &rhs) {
+  std::cout << "MateriaSource assignation operator called" << std::endl;
+
   if (this != &rhs) {
     for (int i = 0; i < 4; i++) {
       if ((this->templates)[i])

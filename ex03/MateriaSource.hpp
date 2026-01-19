@@ -6,7 +6,7 @@
 /*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:34:18 by yoshin            #+#    #+#             */
-/*   Updated: 2026/01/15 12:14:49 by yoshin           ###   ########.fr       */
+/*   Updated: 2026/01/18 21:26:36 by yoshin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 class MateriaSource : public IMateriaSource {
 public:
   MateriaSource();
-  MateriaSource(const MateriaSource &src);
+  MateriaSource(MateriaSource const &src);
   virtual ~MateriaSource();
 
   MateriaSource &operator=(MateriaSource const &rhs);
 
   virtual void learnMateria(AMateria *);
-  virtual AMateria *createMateria(const std::string &type);
+  virtual AMateria *createMateria(std::string const &type);
 
 private:
   AMateria *templates[4];
