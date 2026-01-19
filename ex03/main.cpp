@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yoshin <yoshin@student.42gyeongsan.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/19 13:50:19 by yoshin            #+#    #+#             */
+/*   Updated: 2026/01/19 13:50:19 by yoshin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
 #include "ICharacter.hpp"
 #include "Character.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+
 #include <iostream>
 
 void print_header(const std::string& title)
